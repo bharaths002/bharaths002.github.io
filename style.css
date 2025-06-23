@@ -831,3 +831,59 @@ span.multiple-text {
         margin-top: 2rem;
     }
 }
+
+/* Skills Marquee Styles */
+.skills-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: var(--second-bg-color);
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  margin: 0 2rem;
+}
+
+.skill-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 4px var(--main-color));
+}
+
+.skill-item span {
+  font-size: 1.3rem;
+  color: var(--main-color);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .skill-item {
+    min-width: 80px;
+    margin: 0 1rem;
+  }
+  .skill-item img {
+    width: 32px;
+    height: 32px;
+  }
+}
